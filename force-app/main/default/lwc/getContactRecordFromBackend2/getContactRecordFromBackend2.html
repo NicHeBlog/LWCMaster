@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="My Contact Record" icon-name="standard:contact">
+        <template if:true={contact.data}>
+            <div class="slds-m-around_medium">
+                <p>recordId : {recordId}</p>
+                <p><b>Name</b>: {name}</p>
+                <p><b>Title</b>: {title}</p>
+                <p><b>Phone</b>: <lightning-formatted-phone value={phone}></lightning-formatted-phone></p>
+                <p><b>Email</b>: <lightning-formatted-email value={email}></lightning-formatted-email></p>
+                <p><b>Start Date</b>:<lightning-formatted-date-time value={startdate} 
+                    year="numeric"
+                    month="numeric"
+                    day="numeric" 
+                    time-zone="UTC"></lightning-formatted-date-time></p>
+                <p><b>BirthDay</b>: {birthday}</p>
+            </div>
+        </template>
+    </lightning-card>
+</template>
